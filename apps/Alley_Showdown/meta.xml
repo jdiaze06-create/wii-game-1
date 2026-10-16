@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<app version="1">
+  <name>Alley Showdown</name>
+  <coder>You</coder>
+  <version>1.0</version>
+  <release_date>20261016000000</release_date>
+  <short_description>1930s-style cartoon shooting gallery</short_description>
+  <long_description>Point the Wiimote, press B to shoot the cats and crows, A to reload. Do not shoot the bunny!</long_description>
+</app>
