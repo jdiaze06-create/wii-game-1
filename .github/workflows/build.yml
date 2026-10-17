@@ -16,12 +16,12 @@ jobs:
 
       - name: Package
         run: |
-          mkdir -p out/apps/Alley_Showdown
-          cp Alley_Showdown.dol out/Alley_Showdown.dol
-          cp Alley_Showdown.dol out/apps/Alley_Showdown/boot.dol
-          cp apps/Alley_Showdown/meta.xml out/apps/Alley_Showdown/meta.xml
+          mkdir -p out/apps/Dead_Light
+          cp Dead_Light.dol out/Dead_Light.dol
+          cp Dead_Light.dol out/apps/Dead_Light/boot.dol
+          cp apps/Dead_Light/meta.xml out/apps/Dead_Light/meta.xml
 
       - uses: actions/upload-artifact@v4
         with:
-          name: Alley_Showdown_Wii
+          name: Dead_Light_Wii
           path: out
