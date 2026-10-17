@@ -4,10 +4,13 @@
 ifeq ($(strip $(DEVKITPPC)),)
 $(error "Set DEVKITPPC (e.g. export DEVKITPPC=/opt/devkitpro/devkitPPC)")
 endif
+ifeq ($(strip $(DEVKITPRO)),)
+$(error "Set DEVKITPRO (e.g. export DEVKITPRO=/opt/devkitpro)")
+endif
 
 PREFIX   := $(DEVKITPPC)/bin/powerpc-eabi-
 CC       := $(PREFIX)gcc
-ELF2DOL  := $(DEVKITPRO)/tools/bin/elf2dol
+ELF2DOL  := $(firstword $(wildcard $(DEVKITPRO)/tools/bin/elf2dol) elf2dol)
 
 TARGET   := Dead_Light
 SOURCES  := src

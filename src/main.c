@@ -49,7 +49,7 @@ static float g_ax = 0, g_ay = 0, g_az = -1;      /* aim direction (unit) */
 static float g_travel = 0, g_flick = 1, g_beamf = 1, g_pulse = 0;
 static int   g_health = 100, g_ammo = MAG, g_reload = 0, g_cool = 0;
 static int   g_score = 0, g_best = 0, g_kills = 0, g_wave = 1, g_spawn = 60;
-static int   g_shake = 0, g_hurt = 0, g_scare = 0, g_muzzle = 0, g_heart = 0;
+static int   g_shake = 0, g_hurt = 0, g_scare = 0, g_muzzle = 0;
 
 /* --------------------------------------------------------------- sound */
 
@@ -107,12 +107,12 @@ static void InitSound(void) {
     DCFlushRange(sn_heart, sbytes(n_heart));
     DCFlushRange(sn_click, sbytes(n_click));
 
-    ASND_SetInfiniteVoice(0, VOICE_MONO16, SRATE, 0, sn_drone, sbytes(n_drone), 90, 90);
+    ASND_SetInfiniteVoice(0, VOICE_MONO_16BIT, SRATE, 0, sn_drone, sbytes(n_drone), 90, 90);
 }
 
 static void play(int voice, s16 *buf, int n, int vol) {
     ASND_StopVoice(voice);
-    ASND_SetVoice(voice, VOICE_MONO16, SRATE, 0, buf, sbytes(n), vol, vol, NULL);
+    ASND_SetVoice(voice, VOICE_MONO_16BIT, SRATE, 0, buf, sbytes(n), vol, vol, NULL);
 }
 
 /* ------------------------------------------------------ light + 3D prims */
