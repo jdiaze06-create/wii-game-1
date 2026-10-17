@@ -10,11 +10,11 @@ if errorlevel 1 (
   exit /b 1
 )
 
-if not exist apps\Alley_Showdown mkdir apps\Alley_Showdown
-copy /y Alley_Showdown.dol apps\Alley_Showdown\boot.dol >nul
-dir Alley_Showdown.dol
+if not exist apps\Dead_Light mkdir apps\Dead_Light
+copy /y Dead_Light.dol apps\Dead_Light\boot.dol >nul
+dir Dead_Light.dol
 echo.
 echo DONE.
-echo  - Dolphin: File ^> Open ^> Alley_Showdown.dol
-echo  - Real Wii / USB Loader GX / Homebrew Channel: copy the "apps" folder to the SD card root.
+echo  - Dolphin: File ^> Open ^> Dead_Light.dol
+echo  - Real Wii / Homebrew Channel / USB Loader GX: copy the "apps" folder to the SD card root.
 pause

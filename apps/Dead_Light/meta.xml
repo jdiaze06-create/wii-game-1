@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<app version="1">
+  <name>Dead Light</name>
+  <coder>You</coder>
+  <version>1.0</version>
+  <release_date>20261016000000</release_date>
+  <short_description>3D horror rail shooter</short_description>
+  <long_description>Aim your flashlight with the Wiimote, B to shoot, A to reload. Headshots do triple damage. Don't let them reach you.</long_description>
+</app>

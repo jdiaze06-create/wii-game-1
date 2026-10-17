@@ -1,5 +1,5 @@
 #---------------------------------------------------------------------------------
-# Alley Showdown - Wii homebrew (devkitPPC + libogc)
+# DEAD LIGHT - Wii homebrew (devkitPPC + libogc)
 #---------------------------------------------------------------------------------
 ifeq ($(strip $(DEVKITPPC)),)
 $(error "Set DEVKITPPC (e.g. export DEVKITPPC=/opt/devkitpro/devkitPPC)")
@@ -9,15 +9,15 @@ PREFIX   := $(DEVKITPPC)/bin/powerpc-eabi-
 CC       := $(PREFIX)gcc
 ELF2DOL  := $(DEVKITPRO)/tools/bin/elf2dol
 
-TARGET   := Alley_Showdown
+TARGET   := Dead_Light
 SOURCES  := src
 INCLUDES := -I$(DEVKITPRO)/libogc/include
 LIBPATHS := -L$(DEVKITPRO)/libogc/lib/wii
 
 MACHDEP  := -DGEKKO -mrvl -mcpu=750 -meabi -mhard-float
-CFLAGS   := -O3 -Wall $(MACHDEP) $(INCLUDES)
+CFLAGS   := -O2 -Wall $(MACHDEP) $(INCLUDES)
 LDFLAGS  := $(MACHDEP)
-LIBS     := -lwiiuse -lbte -logc -lm
+LIBS     := -lasnd -lwiiuse -lbte -logc -lm
 
 .PHONY: all clean
 

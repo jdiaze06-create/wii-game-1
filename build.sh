@@ -6,10 +6,10 @@ cd "$(dirname "$0")"
 docker run --rm -v "$PWD":/project -w /project devkitpro/devkitppc \
   bash -c 'export DEVKITPPC=/opt/devkitpro/devkitPPC DEVKITPRO=/opt/devkitpro && make clean && make'
 
-mkdir -p apps/Alley_Showdown
-cp Alley_Showdown.dol apps/Alley_Showdown/boot.dol
-ls -l Alley_Showdown.dol
+mkdir -p apps/Dead_Light
+cp Dead_Light.dol apps/Dead_Light/boot.dol
+ls -l Dead_Light.dol
 echo
 echo "DONE."
-echo " - Dolphin:      File > Open > Alley_Showdown.dol"
-echo " - Real Wii/USB Loader GX/Homebrew Channel: copy the 'apps' folder to the SD card root."
+echo " - Dolphin:      File > Open > Dead_Light.dol"
+echo " - Real Wii/Homebrew Channel/USB Loader GX: copy the 'apps' folder to the SD card root."
